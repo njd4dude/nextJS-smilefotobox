@@ -3,10 +3,10 @@ const IGPosts = () => {
 
   return (
     <div
-      className="p-20 bg-gradient-to-tr from-yellow-400 via-purple-500 to-pink-500 "
+      className="p-20  "
       id="instagram"
     >
-      <h2 className="text-3xl text-black font-monter mb-6">Smile Fotobox Co. Instagram</h2>
+      <h2 className="text-3xl text-black font-monter font-bold mb-16">Smile Fotobox Company Instagram</h2>
 
       <div className="flex flex-wrap gap-8 justify-center ">
         {postIds.map((id, index) => (

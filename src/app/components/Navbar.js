@@ -30,9 +30,8 @@ const Navbar = () => {
 
       {/* Navbar links for mobile */}
       <div
-        className={`font-monter lg:flex lg:items-center lg:justify-center lg:space-x-4 lg:ml-6 mt-4 lg:mt-0 ${
-          isMenuOpen ? "block" : "hidden"
-        }`}
+        className={`font-monter text-white lg:flex lg:items-center lg:justify-center lg:space-x-4 lg:ml-6 mt-4 lg:mt-0 ${isMenuOpen ? "block" : "hidden"
+          }`}
       >
         <a href="#home" className=" py-2 px-4 block">
           Home
@@ -40,12 +39,15 @@ const Navbar = () => {
         <a href="#equipment" className=" py-2 px-4 block">
           Equipment
         </a>
+        <a href="#pricing" className=" py-2 px-4 block">
+          Pricing
+        </a>
         <a href="#instagram" className=" py-2 px-4 block">
           Instagram
         </a>
-        <a href="#contact" className=" py-2 px-4 block">
+        {/* <a href="#contact" className=" py-2 px-4 block">
           Contact
-        </a>
+        </a> */}
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSeGu4gHN_HFx02-3WZ5pFzhi_onrcwTemh8giaK-ExY_GbRsw/viewform"
           target="_blank"

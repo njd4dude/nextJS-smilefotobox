@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import PhotoboothEquipment from "./components/PhotoboothEquipment";
 import IGPosts from "./components/IGPosts";
 import ContactFooter from "./components/ContactFooter";
+import PricingSection from "./components/PricingSection";
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <Navbar />
       <HeroSection />
       <PhotoboothEquipment />
+      <PricingSection />
       <IGPosts />
       <ContactFooter />
     </div>
