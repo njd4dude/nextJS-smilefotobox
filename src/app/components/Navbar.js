@@ -1,58 +1,73 @@
 "use client";
 import { useState } from "react";
-import "@fortawesome/fontawesome-free/css/all.min.css"; // Ensure it's imported
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const closeMenu = () => setIsMenuOpen(false);
+
+  const navLinks = (
+    <>
+      <a href="#home" className="py-2 px-4 block lg:inline-block" onClick={closeMenu}>
+        Home
+      </a>
+      <a
+        href="#equipment"
+        className="py-2 px-4 block lg:inline-block"
+        onClick={closeMenu}
+      >
+        Equipment
+      </a>
+      <a
+        href="#instagram"
+        className="py-2 px-4 block lg:inline-block"
+        onClick={closeMenu}
+      >
+        Instagram
+      </a>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeGu4gHN_HFx02-3WZ5pFzhi_onrcwTemh8giaK-ExY_GbRsw/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="py-2 px-4 block lg:inline-block"
+        onClick={closeMenu}
+      >
+        Book Your Event
+      </a>
+    </>
+  );
 
   return (
-    <nav className="bg-black p-4 sticky -top-1 z-50">
-      <div className="flex justify-end items-center">
-        <button onClick={toggleMenu} className="text-white lg:hidden">
-          {isMenuOpen ? (
-            // Font Awesome close icon (X)
-            <i className="fas fa-times w-6 h-6"></i>
-          ) : (
-            // Font Awesome hamburger icon (three lines)
-            <i className="fas fa-bars w-6 h-6"></i>
-          )}
-        </button>
-      </div>
-      <img
-        src="/images/smilefotoboxLogo.png"
-        alt="Smile Fotobox Co."
-        className="w-24 absolute left-3 top-2"
-      />
+    <nav className="bg-black sticky top-0 z-50">
+      <div className="flex items-center justify-between px-4 py-3 min-h-[56px]">
+        <a href="#home" onClick={closeMenu} className="flex-shrink-0">
+          <img
+            src="/images/smilefotoboxLogo.png"
+            alt="Smile Fotobox Co."
+            className="w-20 sm:w-24"
+          />
+        </a>
 
-      {/* Navbar links for mobile */}
-      <div
-        className={`font-monter text-white lg:flex lg:items-center lg:justify-center lg:space-x-4 lg:ml-6 mt-4 lg:mt-0 ${isMenuOpen ? "block" : "hidden"
-          }`}
-      >
-        <a href="#home" className=" py-2 px-4 block">
-          Home
-        </a>
-        <a href="#equipment" className=" py-2 px-4 block">
-          Equipment
-        </a>
-        <a href="#instagram" className=" py-2 px-4 block">
-          Instagram
-        </a>
-        {/* <a href="#contact" className=" py-2 px-4 block">
-          Contact
-        </a> */}
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeGu4gHN_HFx02-3WZ5pFzhi_onrcwTemh8giaK-ExY_GbRsw/viewform"
-          target="_blank"
-          className=" py-2 px-4 block"
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="text-white lg:hidden p-2 -mr-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
         >
-          Book Your Event
-        </a>
+          <i className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"} text-xl`} />
+        </button>
+
+        <div className="hidden lg:flex font-monter text-white items-center space-x-1">
+          {navLinks}
+        </div>
       </div>
+
+      {isMenuOpen && (
+        <div className="lg:hidden font-monter text-white border-t border-white/10 px-2 pb-4">
+          {navLinks}
+        </div>
+      )}
     </nav>
   );
 };
