@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import JsonLd from "./components/JsonLd";
+import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,8 +20,45 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Smile Fotobox Company",
-  description: "Sacramento Photobooth Rental",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Sacramento Photobooth Rental | Smile Fotobox Company",
+    template: "%s | Smile Fotobox Company",
+  },
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    siteName: siteConfig.name,
+    title: "Sacramento Photobooth Rental | Smile Fotobox Company",
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Smile Fotobox event banner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sacramento Photobooth Rental | Smile Fotobox Company",
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: "/images/smilefotoboxLogo.png",
+    apple: "/images/smilefotoboxLogo.png",
+  },
 };
 
 export const viewport = {
@@ -34,6 +73,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <JsonLd />
         {children}
         <Analytics />
       </body>

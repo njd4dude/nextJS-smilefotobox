@@ -36,12 +36,12 @@ const ContactFooter = () => {
         </div>
 
         <p className="mt-6 text-sm text-neutral-500">
-          Serving the Sacramento area
+          Serving Sacramento, Elk Grove, Roseville, Folsom, Davis, and
+          surrounding areas
         </p>
 
         <p className="mt-6 text-xs text-neutral-600">
-          &copy; {currentYear}{" "}
-          <span itemProp="name">Smile Fotobox Company</span>
+          &copy; {currentYear} Smile Fotobox Company
         </p>
       </div>
     </footer>

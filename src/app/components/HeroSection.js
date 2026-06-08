@@ -27,8 +27,8 @@ const HeroSection = () => {
           Smile Fotobox Company
         </h1>
         <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-white/90 max-w-xl mx-auto leading-relaxed">
-          Photobooth rentals for weddings, quinceañeras, and celebrations across
-          the Sacramento area.
+          Sacramento photobooth rentals for weddings, quinceañeras, and
+          celebrations across the greater Sacramento area.
         </p>
         <div className="mt-4 flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-1 sm:gap-x-3 text-[11px] sm:text-xs uppercase tracking-wide text-white/60">
           <span>DSLR prints</span>

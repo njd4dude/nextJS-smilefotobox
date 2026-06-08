@@ -25,8 +25,9 @@ const PhotoboothEquipment = () => {
             <p className="mt-4 text-neutral-600 leading-relaxed text-[15px] sm:text-base">
               Choose from a range of backdrops to match your theme, whether
               you&apos;re going for cozy and vintage or something bold and
-              creative. For weddings, corporate nights, and birthday parties, we
-              bring the booth, the props, and the energy.
+              creative. For weddings, quinceañeras, corporate nights, and
+              birthday parties across Sacramento, we bring the booth, the props,
+              and the energy.
             </p>
           </div>
         </div>
