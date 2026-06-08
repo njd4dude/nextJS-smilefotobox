@@ -10,6 +10,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        cream: "#FAF8F5",
       },
       fontFamily: {
         monter: ["var(--font-montserrat)"],

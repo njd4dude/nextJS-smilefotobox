@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const GalleryImages = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -9,41 +11,50 @@ const GalleryImages = () => {
     "/images/backdrop1.png",
     "/images/backdrop2.png",
   ];
-  // Function to go to the next image
+
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  // Function to go to the previous image
   const prevImage = () => {
     setCurrentImageIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
+
   return (
-    <div>
-      <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-lg shadow-md overflow-hidden relative">
-        <img
-          src={images[currentImageIndex]}
-          alt="Photo Booth Setup"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute top-1/2 left-0 transform -translate-y-1/2 px-4">
-          <button
-            onClick={prevImage}
-            className="bg-white text-gray-700 p-2 w-6 h-6 rounded-full flex items-center justify-center opacity-40 hover:opacity-100"
-          >
-            <i className="fas fa-chevron-left text-sm"></i>
-          </button>
-        </div>
-        <div className="absolute top-1/2 right-0 transform -translate-y-1/2 px-4">
-          <button
-            onClick={nextImage}
-            className="bg-white text-gray-700 p-2 w-6 h-6 rounded-full flex items-center justify-center opacity-40 hover:opacity-100"
-          >
-            <i className="fas fa-chevron-right text-sm"></i>
-          </button>
-        </div>
+    <div className="relative w-full aspect-square max-w-lg mx-auto lg:mx-0">
+      <Image
+        src={images[currentImageIndex]}
+        alt="Photo booth setup and backdrops"
+        fill
+        className="object-cover"
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        priority
+      />
+      <button
+        onClick={prevImage}
+        aria-label="Previous image"
+        className="absolute top-1/2 left-3 -translate-y-1/2 bg-white/80 text-neutral-700 w-8 h-8 flex items-center justify-center hover:bg-white transition-colors"
+      >
+        <i className="fas fa-chevron-left text-xs" />
+      </button>
+      <button
+        onClick={nextImage}
+        aria-label="Next image"
+        className="absolute top-1/2 right-3 -translate-y-1/2 bg-white/80 text-neutral-700 w-8 h-8 flex items-center justify-center hover:bg-white transition-colors"
+      >
+        <i className="fas fa-chevron-right text-xs" />
+      </button>
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+        {images.map((_, index) => (
+          <span
+            key={index}
+            className={`w-1.5 h-1.5 rounded-full ${
+              index === currentImageIndex ? "bg-white" : "bg-white/40"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );

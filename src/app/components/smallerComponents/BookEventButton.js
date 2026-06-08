@@ -1,7 +1,4 @@
-// BookEventButton.js
-'use client'; // This will make this component a client component
-
-import React from 'react';
+"use client";
 
 const BookEventButton = () => {
   const handleGoogleForm = () => {
@@ -14,7 +11,7 @@ const BookEventButton = () => {
   return (
     <button
       onClick={handleGoogleForm}
-      className="px-8 py-4 text-xl font-bold text-white bg-black bg-opacity-70 rounded-lg hover:scale-105 hover:bg-white hover:text-black transition-transform"
+      className="px-8 py-3 text-base font-semibold text-white bg-neutral-900 hover:bg-white hover:text-neutral-900 border border-neutral-900 transition-colors"
     >
       Book Your Event
     </button>

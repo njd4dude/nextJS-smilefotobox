@@ -2,31 +2,36 @@ import GalleryImages from "./smallerComponents/GalleryImages";
 
 const PhotoboothEquipment = () => {
   return (
-    <div
-      className="my-12 max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg text-black"
-      id="equipment"
-    >
-      <h2 className="text-3xl  font-monter font-semibold mb-6 text-center">
-        Our Photo Booth Setup and Backdrops
-      </h2>
-      <div className="flex flex-col lg:flex-row items-center gap-6">
-        <GalleryImages />
-        <div className="flex-1">
-          <h3 className="text-2xl font-semibold mb-4">
-            Customizable Backdrops to Fit Your Event
-          </h3>
-          <p className="text-gray-700">
-            Our photo booth features a charming vintage wood design, offering a
-            timeless and rustic vibe for your event. With a variety of
-            customizable backdrops to choose from, it perfectly blends classic
-            elegance with a touch of nostalgia. Whether you're aiming for a
-            cozy, vintage feel or something uniquely creative, our photo booth
-            and its diverse backdrop options will add a memorable touch to your
-            event.
-          </p>
+    <section className="py-16 lg:py-24 bg-white" id="equipment">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
+          <div className="w-full lg:w-1/2">
+            <GalleryImages />
+          </div>
+          <div className="w-full lg:w-1/2 lg:pt-4">
+            <p className="text-xs uppercase tracking-widest text-neutral-500 mb-3">
+              The setup
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-monter font-semibold text-neutral-900 leading-snug">
+              A vintage booth with backdrops made for your event
+            </h2>
+            <p className="mt-6 text-neutral-600 leading-relaxed">
+              Our photo booth is built from charming vintage wood — rustic,
+              timeless, and ready for your celebration. We shoot on professional
+              DSLR cameras so every print comes out sharp and vibrant, and we
+              design custom photo templates so your guests walk away with
+              something that feels personal to the day.
+            </p>
+            <p className="mt-4 text-neutral-600 leading-relaxed">
+              Choose from a range of backdrops to match your theme, whether
+              you&apos;re going for cozy and vintage or something bold and
+              creative. Weddings, corporate nights, birthday parties — we bring
+              the booth, the props, and the energy.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
