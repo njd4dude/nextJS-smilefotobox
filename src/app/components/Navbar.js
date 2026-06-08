@@ -39,9 +39,6 @@ const Navbar = () => {
         <a href="#equipment" className=" py-2 px-4 block">
           Equipment
         </a>
-        <a href="#pricing" className=" py-2 px-4 block">
-          Pricing
-        </a>
         <a href="#instagram" className=" py-2 px-4 block">
           Instagram
         </a>
