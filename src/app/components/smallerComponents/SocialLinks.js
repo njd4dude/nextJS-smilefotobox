@@ -2,6 +2,8 @@
 
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 const SocialLinks = ({ className = "" }) => {
   return (
@@ -25,6 +27,22 @@ const SocialLinks = ({ className = "" }) => {
       >
         <FacebookIcon sx={{ fontSize: 20 }} />
         Facebook
+      </a>
+      <a
+        href="mailto:smilefotobox.company@gmail.com"
+        className="inline-flex items-center gap-1.5 text-white/90 hover:text-amber-400 transition-colors min-h-[44px]"
+        title="Email Smile Fotobox Co."
+      >
+        <EmailIcon sx={{ fontSize: 20 }} />
+        Email
+      </a>
+      <a
+        href="tel:+19168575831"
+        className="inline-flex items-center gap-1.5 text-white/90 hover:text-green-400 transition-colors min-h-[44px]"
+        title="Call Smile Fotobox Co."
+      >
+        <PhoneIcon sx={{ fontSize: 20 }} />
+        (916) 857-5831
       </a>
     </div>
   );
