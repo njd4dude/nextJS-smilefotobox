@@ -1,29 +1,15 @@
 import SocialLinks from "./smallerComponents/SocialLinks";
 import BookEventButton from "./smallerComponents/BookEventButton";
+import HeroBackgroundVideo from "./smallerComponents/HeroBackgroundVideo";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const HeroSection = () => {
   return (
     <section
-      className="relative min-h-[75vh] sm:min-h-[70vh] lg:min-h-[70vh] flex flex-col justify-end overflow-hidden"
+      className="relative min-h-[75vh] sm:min-h-[70vh] lg:min-h-[70vh] flex flex-col justify-end overflow-hidden bg-neutral-900"
       id="home"
-      style={{
-        backgroundImage: "url(/images/samplePrint.webp)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/images/samplePrint.webp"
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source src="/hero-compressed.mp4" type="video/mp4" />
-      </video>
+      <HeroBackgroundVideo />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/25" />
 
