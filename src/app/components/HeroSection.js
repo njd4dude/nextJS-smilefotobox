@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 const HeroSection = () => {
   return (
     <section
-      className="relative min-h-[75vh] sm:min-h-[70vh] lg:min-h-[70vh] flex flex-col justify-end"
+      className="relative min-h-[75vh] sm:min-h-[70vh] lg:min-h-[70vh] flex flex-col justify-end overflow-hidden"
       id="home"
       style={{
         backgroundImage: "url(/images/samplePrint.webp)",
@@ -13,6 +13,18 @@ const HeroSection = () => {
         backgroundPosition: "center",
       }}
     >
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/images/samplePrint.webp"
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/hero-compressed.mp4" type="video/mp4" />
+      </video>
+
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/25" />
 
       <div className="absolute top-3 left-4 right-4 sm:left-6 flex items-center text-white/90 z-10">
