@@ -20,6 +20,13 @@ const Navbar = () => {
         Equipment
       </a>
       <a
+        href="#backdrops"
+        className="py-2 px-4 block lg:inline-block"
+        onClick={closeMenu}
+      >
+        Backdrops
+      </a>
+      <a
         href="#instagram"
         className="py-2 px-4 block lg:inline-block"
         onClick={closeMenu}
